@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,14 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 const styles = {
-    root: {
-        flexGrow: 1
-        
-    },
-    flex: {
-        flexGrow: 1,
-        
-    },
+   
     menuButton: {
         marginLeft: -12,
         marginRight: 20
@@ -30,8 +23,7 @@ function ButtonAppBar(props) {
     const { classes } = props;
    
     return (
-        <div className={classes.root}>
-            
+        <Fragment>
                     <AppBar title={<img src="logo.png" style="color:black;"/>} style={{backgroundColor: "white", color:"#3F4244"}}  position="static">
                         <Toolbar>
                             <IconButton style={{marginRight:"10%"}} className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -53,7 +45,7 @@ function ButtonAppBar(props) {
                     </AppBar>
            
 
-        </div>
+        </Fragment>
     );
 }
 
